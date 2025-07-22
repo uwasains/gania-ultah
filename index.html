@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Selamat Ulang Tahun Gania!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffe6f0, #fff0f5);
+      overflow: hidden;
+      color: #333;
+    }
+    .container {
+      text-align: center;
+      padding: 60px 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 48px;
+      color: #ff69b4;
+      animation: pulse 2s infinite;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-top: 20px;
+    }
+    .love {
+      color: #ff3399;
+      font-size: 28px;
+      animation: heartBeat 1.5s infinite;
+    }
+    footer {
+      margin-top: 50px;
+      font-style: italic;
+      font-size: 14px;
+      color: #888;
+    }
+    .sparkles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .sparkle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: pink;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: float 5s linear infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(1); opacity: 1; }
+      100% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
+    }
+    @keyframes heartBeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+    @keyframes pulse {
+      0%, 100% { color: #ff69b4; }
+      50% { color: #ff85c1; }
+    }
+  </style>
+</head>
+<body>
+<div class="sparkles" id="sparkles"></div>
+<div class="container">
+  <h1>🎉 Selamat Ulang Tahun Gania 🎂</h1>
+  <p>
+    Hallo sayanggggg 💕 maaf ya telat ngucapinya 😔<br><br>
+    Selamattt ulang tahun sayangnya akuuu yang ke 20 🥳<br>
+    Semoga panjang umur, selalu sehattt, always bahagiaaa yaaa cantikkk 💖<br><br>
+    Ganyangka hubungan kita udah bisa sejauh ini...<br>
+    Dan yaa, ini pertama kalinya aku ada di hari ultah kamu 🥺<br>
+    I wish semoga untuk seterusnya bahkan selamanya aku bakal selalu ada di hari perayaan ultah kamu 🎁 dan sebaliknya 🫂<br><br>
+    Maaf yaa aku sering bikin kamu kesel, marah, emosi, dan semuamuamuanya 😣<br>
+    Tapi aku juga harus bilang makasih sebesar-besarnya karena kamu udah support aku sejauh ini, bahkan sampai titik terendah aku 😭<br>
+    Aku ga kebayang harus gimana kalo gaada kamu 😢<br><br>
+    Intinya... makasih banyak semuanya 😘<br>
+    <span class="love">I LOVE YOU SO MUCH MY NDUTT 💞</span>
+  </p>
+  <footer>
+    Made with ❤️ by Kamu
+  </footer>
+</div>
+<script>
+  const sparkleContainer = document.getElementById("sparkles");
+  for (let i = 0; i < 50; i++) {
+    const sparkle = document.createElement("div");
+    sparkle.className = "sparkle";
+    sparkle.style.left = Math.random() * 100 + "vw";
+    sparkle.style.animationDuration = (2 + Math.random() * 3) + "s";
+    sparkleContainer.appendChild(sparkle);
+  }
+</script>
+</body>
+</html>
